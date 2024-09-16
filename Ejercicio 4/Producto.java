@@ -4,7 +4,11 @@ public class Producto {
 	private double peso; // Asumo que es en kilo (1kg, 0.5kg, etc)
 	private double precioPorKilo;
 	private String descripcion;
-	
+
+	public Producto() {
+
+	}
+
 	public Producto(double unPeso, double unPrecioPorKilo, String unaDescripcion) {
 		this.peso = unPeso;
 		this.precioPorKilo = unPrecioPorKilo;
