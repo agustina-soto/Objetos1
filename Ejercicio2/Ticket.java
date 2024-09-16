@@ -51,6 +51,6 @@ public class Ticket {
 	}
 	
 	public double impuesto() {
-		return (this.precioTotal*0.21); // esto es lo que me pide devolver??
+		return (this.precioTotal*0.21);
 	}
 }
