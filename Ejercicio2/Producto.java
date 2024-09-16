@@ -1,4 +1,4 @@
-package ar.edu.unlp.info.oo1.balanzaElectronica;
+package ar.edu.unlp.info.oo1.ejercicio4;
 
 public class Producto {
 	private double peso; // Asumo que es en kilo (1kg, 0.5kg, etc)
