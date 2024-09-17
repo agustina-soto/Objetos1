@@ -12,7 +12,7 @@ public class Balanza {
 	}
 
 	public void ponerEnCero() {
-		this.productos = new ArrayList<Producto>();
+		this.productos.clear();
 	}
 	
 	public void agregarProducto(Producto producto) {
