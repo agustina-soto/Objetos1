@@ -105,5 +105,56 @@ public class Mamifero {
 	    // El ancestro no existe (esta bien asumir que puede no existir? dado que la conigna no me asegura que exista)
 	    return false;
 	}
+
+	// -----lu ------
+
 	
+	public Mamifero getAbueloPaterno() {
+		if (this.getPadre() != null){
+			return this.getPadre().getPadre();
+		}else {
+			return null;
+		}
+	}
+	
+	public Mamifero getAbuelaPaterna() {
+		if (this.getPadre() != null) {
+			return this.getPadre().getMadre();
+		}else {
+			return null;
+		}	
+	}
+	
+	public Mamifero getAbueloMaterno() {
+		if (this.getMadre() != null) {
+			return this.getMadre().getPadre();
+		}else {
+			return null;
+		}
+		
+	}
+	
+	public Mamifero getAbuelaMaterna() {
+		if (this.getMadre() != null) {
+			return this.getMadre().getMadre();
+		}else {
+			return null;
+		}
+		
+	}
+	
+	public boolean tieneComoAncestroA(Mamifero unMamifero) {
+	    //pregunto al padre si es el ancestro, o si tiene ese ancestro
+	    if (this.getPadre() != null && (this.getPadre().equals(unMamifero) || 
+	    		this.getPadre().tieneComoAncestroA(unMamifero))) {
+	        return true;
+	    }
+	    //pregunto a mi madre si es el ancestro, o si tiene ese ancestro
+	    if (this.getMadre() != null && (this.getMadre().equals(unMamifero) || 
+	    		this.getMadre().tieneComoAncestroA(unMamifero))) {
+	        return true;
+	    }
+	    //retorno false en caso de que no se haya podido ingresar en los ifs
+	    return false;
+	}
 }
