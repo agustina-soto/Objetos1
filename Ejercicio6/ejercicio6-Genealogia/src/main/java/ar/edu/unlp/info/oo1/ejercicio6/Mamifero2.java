@@ -134,6 +134,30 @@ public class Mamifero {
 	}
 	
 	
+/// metodo ancestros arreglado :)
+
+	public boolean tieneComoAncestroA(Mamifero unMamifero) {
+		boolean tiene = false;
+		
+		if (this.equals(unMamifero)) {
+	        return tiene = true;
+	    }
+	    else {
+	    	if(this.tienePadre()) {
+	    		tiene = this.tieneComoAncestroA(this.getPadre(), unMamifero);
+	    	}
+		    if(!tiene && this.tieneMadre()) {
+	    		tiene = this.tieneComoAncestroA(this.getMadre(), unMamifero);
+		    }
+	    }
+		return tiene;
+	}
+
+
+
+
+
+
 
 	
 	/*	 lu
