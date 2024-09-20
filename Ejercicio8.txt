@@ -1,0 +1,14 @@
+Tareas:
+1. Liste todos los métodos, indicando nombre y clase, que son ejecutados como resultado del envío del último mensaje de cada fragmento de código (por ejemplo, (1) método +aportes de la clase Empleado, (2) ...)
+2. ¿Qué valores tendrán las variables aportesDeAlan y sueldoBasicoDeAlan luego de ejecutar cada fragmento de código?
+
+1. Métodos:
+            (1) aportes de la clase Gerente.
+            (2) montoBasico de la clase Empleado.
+            Valor de aportesDeAlan: 2850.
+
+2. Métodos:
+            (1) sueldoBasico de la clase EmpleadoJerarquico.
+            (2) sueldoBasico de la clase Empleado.
+            (3) bonoPorCategoria de la clase EmpleadoJerarquico.
+            Valor de sueldoBasicoDeAlan: 280,000,000.
