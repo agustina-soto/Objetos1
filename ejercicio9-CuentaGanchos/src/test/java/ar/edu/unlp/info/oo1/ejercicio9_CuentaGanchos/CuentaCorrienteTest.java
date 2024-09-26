@@ -29,11 +29,11 @@ public class CuentaCorrienteTest {
 	@Test
 	void testPuedeExtraer() {
 		// Puede extraer
-		assertEquals(true, cuentaCorriente1.puedeExtraer(200));
-		assertEquals(true, cuentaCorriente2.puedeExtraer(50));
+		assertEquals(true, cuentaCorriente1.extraer(200));
+		assertEquals(true, cuentaCorriente2.extraer(50));
 		// No puede extraer
-		assertEquals(false, cuentaCorriente1.puedeExtraer(20000));
-		assertEquals(false, cuentaCorriente2.puedeExtraer(30000));
+		assertEquals(false, cuentaCorriente1.extraer(20000));
+		assertEquals(false, cuentaCorriente2.extraer(30000));
 	}
 
 }
