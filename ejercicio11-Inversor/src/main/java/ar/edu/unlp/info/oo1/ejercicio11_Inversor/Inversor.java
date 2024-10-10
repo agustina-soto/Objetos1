@@ -29,4 +29,9 @@ public class Inversor {
 										.mapToDouble(inv -> inv.valorActual())
 										.sum());
 	}
+
+	public void agregarInversion(Inversion inv) {
+		this.inversiones.add(inv);
+		
+	}
 }
