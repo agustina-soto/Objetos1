@@ -3,8 +3,12 @@ package ar.edu.unlp.info.oo1.ejercicio12_VolumenYSuperficie;
 public abstract class Pieza {
 	private String material;
 	private String color;
-	
-	
+
+	public Pieza(String material, String color) {
+		this.material = material;
+		this.color = color;
+	}
+
 	public String getMaterial() {
 		return this.material;
 	}
@@ -13,7 +17,7 @@ public abstract class Pieza {
 		return this.color;
 	}
 	
-	public abstract double getVolumen(String nombreDeMaterial);
+	public abstract double getVolumen();
 	
-	public abstract double getSuperficie(String unNombreDeColor);
+	public abstract double getSuperficie();
 }

@@ -4,7 +4,14 @@ public class PrismaRectangular extends Pieza {
 	private int altura;
 	private int ladoMayor;
 	private int ladoMenor;
-	
+
+	public PrismaRectangular(String material, String color, int altura, int ladoMayor, int ladoMenor) {
+		super(material, color);
+		this.altura = altura;
+		this.ladoMayor = ladoMayor;
+		this.ladoMenor = ladoMenor;
+	}
+
 	public int getAltura() {
 		return this.altura;
 	}
@@ -17,13 +24,11 @@ public class PrismaRectangular extends Pieza {
 		return this.ladoMenor;
 	}
 	
-	// Recibe como parámetro un nombre de material y retorna la suma de los volúmenes de todas las piezas hechas en ese material
-	public double getVolumen(String nombreDeMaterial) {
+	public double getVolumen() {
 		return (this.ladoMayor * this.ladoMenor * this.altura);
 	}
 
-	// Recibe como parámetro un color y retorna la suma de las superficies externas de todas las piezas pintadas con ese color
-	public double getSuperficie(String unNombreDeColor) {	
+	public double getSuperficie() {	
 		return 2*(this.ladoMayor * this.ladoMenor + this.ladoMayor * this.altura + this.ladoMenor * this.altura);
 	}
 

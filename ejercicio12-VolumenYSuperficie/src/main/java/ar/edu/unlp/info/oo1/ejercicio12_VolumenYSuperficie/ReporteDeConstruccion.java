@@ -21,14 +21,14 @@ public class ReporteDeConstruccion {
 	public double getVolumenDeMaterial(String material) {
 		return this.piezas.stream() // Convierte la lista en stream
 				.filter(p -> p.getMaterial().equals(material)) // Stream con todas las piezas del material pedido
-				.mapToDouble(p -> p.getVolumen(material)) // Obtiene el volumen de cada pieza filtrada
+				.mapToDouble(p -> p.getVolumen()) // Obtiene el volumen de cada pieza filtrada
 				.sum();
 	}
 
 	public double getSuperficieDeColor(String color) {
 		return this.piezas.stream() // Convierte la lista en stream
 				.filter(p -> p.getColor().equals(color)) // Stream con todas las piezas del color pedido
-				.mapToDouble(p -> p.getSuperficie(color)) // Obtiene la superficie de cada pieza filtrada
+				.mapToDouble(p -> p.getSuperficie()) // Obtiene la superficie de cada pieza filtrada
 				.sum();
 	}
 
