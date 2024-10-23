@@ -1,0 +1,16 @@
+La interfaz Set<E> en Java tiene varias implementaciones que ya están disponibles en la biblioteca estándar de Java.
+Las más comunes son:
+
+HashSet<E>:
+ - Esta clase implementa la interfaz Set<E> utilizando una tabla hash.
+ - Es eficiente para operaciones básicas como add, remove y contains.
+ - No garantiza un orden específico de los elementos.
+
+TreeSet<E>:
+ - Implementa la interfaz Set<E> utilizando un árbol rojo-negro (una estructura de datos de árbol balanceado).
+ - Los elementos se almacenan en orden ascendente (orden natural o por un comparador).
+ - Las operaciones son un poco más lentas que en HashSet, pero tiene la ventaja del orden.
+
+LinkedHashSet<E>:
+ - Similar a HashSet, pero además mantiene un orden de inserción. Es decir, el orden en el que agregas los elementos será el mismo en que aparecerán cuando los recorras.
+ - Útil si necesitas mantener un orden predecible, pero es un poco más costosa en términos de rendimiento que HashSet.
