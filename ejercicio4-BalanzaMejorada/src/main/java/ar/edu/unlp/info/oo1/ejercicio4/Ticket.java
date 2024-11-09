@@ -37,7 +37,7 @@ public class Ticket {
 	}
 	
 	public double impuesto() {
-		return (getPesoTotal() * 0.21);
+		return (getPrecioTotal() * 0.21);
 	}
 	
 	// Retorna todos los productos del ticket
