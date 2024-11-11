@@ -72,6 +72,14 @@ public class EnvioTest { // Para calcular el monto no tiene en cuenta si es pers
 		assertEquals(this.envioInternacional.calcularMontoEnvio(), 5000 + (10 * 1000), 0.1);
 		this.envioInternacional.setPeso(1001); // Setea más de 1 kg
 		assertEquals(this.envioInternacional.calcularMontoEnvio(), 5000 + (12 * 1001), 0.1);
-	}	
+	}
+	
+	@Test
+	void testEstaIncluidoEnElPeriodo() {
+		LocalDate from = LocalDate.of(2023, 3, 22); LocalDate to = LocalDate.of(2024, 11, 02);
+		assertTrue(this.envioLocal.estaIncluidoEnElPeriodo(from, to));
+		assertFalse(this.envioInterurbano.estaIncluidoEnElPeriodo(from, to));
+		assertTrue(this.envioInternacional.estaIncluidoEnElPeriodo(from, to));
+	}
 
 }
