@@ -22,7 +22,7 @@ public abstract class Cliente {
 	public double getMontoAPagar(LocalDate fechaInicio, LocalDate fechaFin) {
 		return this.envios.stream()
 				.filter(envio -> envio.estaIncluidoEnElPeriodo(fechaInicio, fechaFin)) // Filtra los envíos que no están en fecha
-				.mapToDouble(envio -> envio.calcularMontoEnvio(fechaInicio, fechaFin))
+				.mapToDouble(envio -> envio.calcularMontoEnvio())
 				.sum();
 	}
 }

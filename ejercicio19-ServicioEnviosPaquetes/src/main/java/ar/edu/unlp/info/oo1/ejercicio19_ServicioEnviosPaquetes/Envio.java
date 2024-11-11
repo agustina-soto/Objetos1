@@ -7,7 +7,7 @@ public abstract class Envio {
 	protected String direccionOrigen;
 	protected String direccionDestino;
 	protected double peso;
-	private Cliente cliente;
+	protected Cliente cliente;
 
 	public Envio(LocalDate fecha, String direccionOrigen, String direccionDestino, double peso, Cliente cliente) {
 		this.fecha = fecha;
@@ -23,6 +23,13 @@ public abstract class Envio {
 				(this.fecha.isBefore(fechaFin) || this.fecha.isEqual(fechaFin) );
 	}
 
-	public abstract double calcularMontoEnvio(LocalDate fechaInicio, LocalDate fechaFin);
+	public abstract double calcularMontoEnvio();
 
+	public double getPeso() {
+		return this.peso;
+	}
+	
+	public void setPeso(double peso) {
+		this.peso = peso;
+	}
 }

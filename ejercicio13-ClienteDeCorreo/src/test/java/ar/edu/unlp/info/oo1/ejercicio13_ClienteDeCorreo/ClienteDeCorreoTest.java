@@ -46,7 +46,7 @@ public class ClienteDeCorreoTest {
 	@Test
 	void testBuscar() {
 		assertEquals(e3, cliente.buscar("Re"));
-		assertEquals(e1, cliente.buscar("imagen")); // no entiendo bien como funciona esto de cual agarra primero (es literal por cual agrego antes a la lista?) CHEQUEAR!!
+		assertEquals(e1, cliente.buscar("imagen"));
 	}
 	
 	@Test

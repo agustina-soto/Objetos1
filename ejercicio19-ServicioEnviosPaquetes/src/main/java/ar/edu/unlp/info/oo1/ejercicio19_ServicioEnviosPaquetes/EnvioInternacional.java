@@ -13,8 +13,8 @@ public class EnvioInternacional extends Envio {
 	 * Por ahora, utilice $5000 para cualquier destino y $10 por gramo de peso para envíos de hasta
 	 * 1 kg y $12 para envíos de más de 1 kg.
 	 */
-	public double calcularMontoEnvio(LocalDate fechaInicio, LocalDate fechaFin) {
+	public double calcularMontoEnvio() {
 		double costo_por_gramo = this.peso <= 1000 ? 10 : 12;
-		return 5000 * costo_por_gramo * this.peso;
+		return 5000 + (costo_por_gramo * this.peso);
 	}
 }
