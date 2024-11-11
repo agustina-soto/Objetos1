@@ -14,9 +14,7 @@ public class EnvioInternacional extends Envio {
 	 * 1 kg y $12 para envíos de más de 1 kg.
 	 */
 	public double calcularMontoEnvio(LocalDate fechaInicio, LocalDate fechaFin) {
-		double costo_por_gramo = this.estaIncluidoEnElPeriodo(fechaInicio, fechaFin) ? // si la fechaes valida:
-									this.peso <= 1000 ? 10 : 12
-											: 0; // si la fecha no es valida devuelve 0
+		double costo_por_gramo = this.peso <= 1000 ? 10 : 12;
 		return 5000 * costo_por_gramo * this.peso;
 	}
 }

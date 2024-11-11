@@ -14,6 +14,6 @@ public class EnvioLocal extends Envio {
 	 * Los envíos locales tienen un costo fijo de $1000 para las entregas estándar y $500 adicional por entrega rápida .
 	 */
 	public double calcularMontoEnvio(LocalDate fechaInicio, LocalDate fechaFin) {
-		return this.estaIncluidoEnElPeriodo(fechaInicio, fechaFin) ? (this.entregaRapida ? 1500 : 1000) : 0; // esta bien devolver 0??
+		return this.entregaRapida ? 1500 : 1000;
 	}
 }

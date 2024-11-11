@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cliente {
+public abstract class Cliente {
 	protected String nombre;
 	protected String direccion;
 	protected List<Envio> envios;
@@ -21,6 +21,7 @@ public class Cliente {
 	
 	public double getMontoAPagar(LocalDate fechaInicio, LocalDate fechaFin) {
 		return this.envios.stream()
+				.filter(envio -> envio.estaIncluidoEnElPeriodo(fechaInicio, fechaFin)) // Filtra los envíos que no están en fecha
 				.mapToDouble(envio -> envio.calcularMontoEnvio(fechaInicio, fechaFin))
 				.sum();
 	}

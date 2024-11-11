@@ -11,6 +11,6 @@ public class PersonaFisica extends Cliente {
 	}
 
 	public double getMontoAPagar(LocalDate fechaInicio, LocalDate fechaFin) {
-		return super.getMontoAPagar(fechaInicio, fechaFin) * 0.1; // Se le resta el 10%
+		return ( super.getMontoAPagar(fechaInicio, fechaFin) ) * 0.1; // Se le resta el 10% a lo que devuelve la clase padre
 	}
 }

@@ -17,11 +17,7 @@ public class EnvioInterurbano extends Envio {
 	500 km por gramo de peso, y $30 para distancias de más de 500 km por gramo de peso).
 	 */
 	public double calcularMontoEnvio(LocalDate fechaInicio, LocalDate fechaFin) {
-		double monto = this.estaIncluidoEnElPeriodo(fechaInicio, fechaFin) ? // si es valida la fecha:
-						this.distancia_km < 100 ? 20 :
-						this.distancia_km < 500 ? 25 :
-						30
-						: 0; // sino es valida la fecha devuelve 0
+		double monto = this.distancia_km < 100 ? 20 : this.distancia_km < 500 ? 25 : 30;
 		return this.peso * monto;
 	}
 }
