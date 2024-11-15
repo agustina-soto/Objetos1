@@ -8,3 +8,4 @@ target/
 
 # Git
 .gitignore
+/ejercicio17-AlquilerDePropiedades/
