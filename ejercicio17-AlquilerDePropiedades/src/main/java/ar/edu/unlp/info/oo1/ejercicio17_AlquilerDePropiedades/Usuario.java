@@ -19,13 +19,16 @@ public class Usuario {
 	public boolean realizarReserva(DateLapse periodo, Propiedad propiedad) {
 		if (propiedad.consultarDisponibilidad(periodo)) { // Revisa si la propiedad esta disponible durante el período
 			Reserva r = new Reserva(periodo, propiedad, this);
+			propiedad.crearReserva(r);
 			this.reservas.add(r);
-			//aca lo tengo q agregar en la lista de propiedades tmb?? como hago eso sin romper encapsulamientio??????
 		}
 		return false;
 	}
 
 	public void cancelarReserva(Reserva reserva) {
-		this.reservas.remove(reserva);
+		if(!reserva.estaEnCurso(reserva)) {
+			this.reservas.remove(reserva);
+			//...propiedad?
+		}
 	}
 }

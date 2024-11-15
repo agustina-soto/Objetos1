@@ -14,4 +14,12 @@ public class Reserva {
 	public double calcularPrecio(double precioXNoche) {
 		return precioXNoche * periodo.sizeInDays();
 	}
+	
+	public boolean estaEnCurso(Reserva r) {
+		return true;
+	}
+	
+	public void cancelarReserva() {
+		this.propiedad.cancelarReserva();
+	}
 }

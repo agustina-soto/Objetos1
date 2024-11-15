@@ -28,8 +28,8 @@ está disponible el período indicado.
 		return true;
 	}
 	
-	public boolean crearReserva() {
-		return true;
+	public void crearReserva(Reserva r) {
+		this.reservas.add(r);
 	}
 	
 	public void cancelarReserva() {
