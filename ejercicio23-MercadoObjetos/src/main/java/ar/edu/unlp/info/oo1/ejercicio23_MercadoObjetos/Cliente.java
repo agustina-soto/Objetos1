@@ -14,7 +14,7 @@ public class Cliente extends Persona {
 	public Pedido crearPedido(FormaPago fp, FormaEnvio fe, Producto p, int cantPedida) {
 		if(p.hayStock(cantPedida)) {
 			p.disminuirStock(cantPedida);
-			Pedido nuevoP = new Pedido(this, fp, fe, p, cantPedida);
+			Pedido nuevoP = new Pedido(fp, fe, p, cantPedida);
 			this.pedidos.add(nuevoP);
 			return nuevoP;
 		}

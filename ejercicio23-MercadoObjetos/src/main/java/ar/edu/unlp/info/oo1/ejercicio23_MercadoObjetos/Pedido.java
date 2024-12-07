@@ -1,14 +1,12 @@
 package ar.edu.unlp.info.oo1.ejercicio23_MercadoObjetos;
 
 public class Pedido {
-	private Cliente cliente;
 	private FormaPago pago;
 	private FormaEnvio envio;
 	private Producto producto;
 	private int cant_solicitada;
 	
-	public Pedido(Cliente c, FormaPago p, FormaEnvio e, Producto prod, int cant) {
-		this.cliente = c;
+	public Pedido(FormaPago p, FormaEnvio e, Producto prod, int cant) {
 		this.pago = p;
 		this.envio = e;
 		this.producto = prod;

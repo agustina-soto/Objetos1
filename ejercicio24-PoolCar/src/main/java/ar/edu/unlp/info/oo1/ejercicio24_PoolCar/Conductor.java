@@ -22,7 +22,7 @@ public class Conductor extends Usuario {
 	public void procesarViaje(double monto) {
 		// se le bonifica el 0.1% del valor del vehiculo
 		monto -= this.vehiculo.get1PercentValorMercado();
-		this.saldo -= monto;
+		super.procesarViaje(monto);
 	}
 	
 }

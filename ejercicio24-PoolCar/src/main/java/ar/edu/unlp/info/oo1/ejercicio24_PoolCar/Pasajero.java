@@ -43,7 +43,7 @@ public class Pasajero extends Usuario {
 		if (!this.viajes.isEmpty()) {
 			costo -= 500;
 		}
-		this.saldo -= costo;
+		super.procesarViaje(costo);
 	}
 
 }

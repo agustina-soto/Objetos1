@@ -15,5 +15,7 @@ public abstract class Usuario {
 	
 	public abstract void cargarSaldo(double monto);
 
-	public abstract void procesarViaje(double costo);
+	public void procesarViaje(double costo) {
+		this.saldo -= costo;
+	}
 }
